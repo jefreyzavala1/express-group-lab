@@ -1,4 +1,4 @@
-<h2>Overview:</h2>
+ <h2>Overview:</h2>
   <p>We created an instance of the app object,set up middleware, and set the view engine to jsx. Also set the app to
     send
     mongoose to connect to our mongodb database and set up our server to listen on port 3000. We set up different
@@ -16,12 +16,18 @@
     using ---require('dotenv').config()---. </p>
 
   <h2>Serving static files:</h2>
-  <p>to serve our static file in views, we first set our app to use express.static middleware. Of which, references the public folder for items/pages/ etc that will be displayed on the browser. For ex: to diplay the css file found public folder for the css folder. ex:http://localhost:3000/css/app.css</p>
+  <p>to serve our static file in views, we first set our app to use express.static middleware. Of which, references the
+    public folder for items/pages/ etc that will be displayed on the browser. For ex: to diplay the css file found
+    public folder for the css folder. ex:http://localhost:3000/css/app.css</p>
 
   <h2>Testing:</h2>
-  <p>Used postman to manually test our routes and console more info about the made request -- like http verb, the ip, as well as the response time and size. Then used jest and supertest to test to run automated testing. the api passed all 6 tests. </p>
+  <p>Used postman to manually test our routes and console more info about the made request -- like http verb, the ip, as
+    well as the response time and size. Then used jest and supertest to test to run automated testing. the api passed
+    all 6 tests. </p>
   <h2>Optimizations</h2>
-  <p>.Try to add the global variable as part of the user model schema like have a property of access:Boolean.When user
-    hits the create route set access to false.When logged in target access and set to true.If user wants to update or
-    delete we first check if that users access is true else respond back with 'log back in'.When user hits the logout
-    route we set access to false.</p>
+  <p>when we generate a token in the middleware we set/assign token to true (which corrosponds to the id of the user).
+    And then, when we make further requests we dont need to generate another token because its set to true in login.
+    This is in lieu of setting the auth token to true every time. we followed DRY methodology that keeps the code
+    readable and maintainable. we tested the optimization of our code by creating an artillery file and tested our
+    server to handle enough thruoghput and it passed. instead of hard storing the password in the code, we used bcrypt
+    to hash the password making it more secure.</p>
