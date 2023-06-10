@@ -1,4 +1,4 @@
- <h2>Overview:</h2>
+<h2>Overview:</h2>
   <p>We created an instance of the app object,set up middleware, and set the view engine to jsx. Also set the app to
     send
     mongoose to connect to our mongodb database and set up our server to listen on port 3000. We set up different
@@ -31,3 +31,10 @@
     readable and maintainable. we tested the optimization of our code by creating an artillery file and tested our
     server to handle enough thruoghput and it passed. instead of hard storing the password in the code, we used bcrypt
     to hash the password making it more secure.</p>
+  <h2>Challenges:</h2>
+  <ul>
+    <li>Logout functinality</li>
+    <li>Undestanding JWT</li>
+    <li>Postman api calls</li>
+    <li>Not knowing if delete route needed auth</li>
+  </ul>
