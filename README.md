@@ -1,5 +1,5 @@
 <h2>Overview:</h2>
-  <p>We created an instance of the app object,set up middleware, and set the view engine to jsx. Also set the app to
+  <p>We created an instance of the app object, set up middleware, and set the view engine to jsx. Also set the app to
     send
     mongoose to connect to our mongodb database and set up our server to listen on port 3000. We set up different
     controller functions such as getUser,createUser, deleteUser,updateUser and logUser. But for a user to be be able to
@@ -22,8 +22,9 @@
 
   <h2>Testing:</h2>
   <p>Used postman to manually test our routes and console more info about the made request -- like http verb, the ip, as
-    well as the response time and size. Then used jest and supertest to test to run automated testing. the api passed
-    all 6 tests. </p>
+    well as the response time and size. Then used jest and supertest to write automated tests to ensure the
+    functionality, correctness and reliability of our code. All 6 tests passed successfully.
+  </p>
   <h2>Optimizations</h2>
   <p>when we generate a token in the middleware we set/assign token to true (which corrosponds to the id of the user).
     And then, when we make further requests we dont need to generate another token because its set to true in login.
